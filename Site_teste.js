@@ -1,43 +1,31 @@
 // ######################################################### FUNCTIONS #########################################################
-const usuarios = [
-    {
-        login: 'Rafael',
-        senha: '12345'
-    },
-    {
-        login: 'Julio',
-        senha: '1234'
-    },
-    {
-        login: 'admin',
-        senha: 'admin'
-    }
-]
 
 document.addEventListener('DOMContentLoaded', function () {
-    let botao = document.getElementById('submit')
+    let botao = document.getElementById('submit');
     let linkCadastro = document.querySelector('.ab-3 a');
 
-
     botao.addEventListener('click', function logar() {
-        let pegarlogin = document.getElementById('usuario').value
-        let pegarsenha = document.getElementById('senha').value
-        let loginbemsucedido = false;
+        let pegarlogin = document.getElementById('usuario').value;
+        let pegarsenha = document.getElementById('senha').value;
+        let loginBemSucedido = false;
 
-        for (let i in usuarios) {
-            if (pegarlogin == usuarios[i].login && pegarsenha == usuarios[i].senha) {
-                alert('Login bem Sucedido');
-                loginBemSucedido = true;
-                break;
-            }
+        // Recuperar dados de cadastro do localStorage
+        const usernameArmazenado = localStorage.getItem('username');
+        const passwordArmazenado = localStorage.getItem('password');
+
+        // Verificar se as credenciais fornecidas correspondem aos dados armazenados
+        if (pegarlogin === usernameArmazenado && pegarsenha === passwordArmazenado) {
+            alert('Login bem Sucedido');
+            loginBemSucedido = true;
         }
 
-        // Verifica se o login foi bem-sucedido após o loop
+        // Verifica se o login foi bem-sucedido
         if (loginBemSucedido) {
-            location.href = 'Armazenar_fotos.html';
+            location.href = 'menu.html';
         } else {
             alert('Usuário ou senha inválidos');
         }
     });
 });
+
 // ######################################################### MAIN CODE #########################################################
