@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .topic h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .post h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .post p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .comment {
+            margin-left: 20px;
+            border-left: 3px solid #ddd;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+
+        .comment p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .upload-form, .comment-form {
+            margin-top: 20px;
+        }
+
+        .upload-form input, .comment-form input, .comment-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .upload-form button, .comment-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .upload-form button:hover, .comment-form button:hover {
+            background-color: rgba(0, 100, 0, 0.363);
+            color: #4caf50;
+            border: 2px solid #4caf50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fórum</h1>
+    </header>
+
+    <nav>
+        <a href="#categoria1">Menu</a>
+    </nav>
+
+    <div class="container" id="forum-container">
+        <!-- Formulário de criação de post -->
+        <div class="upload-form">
+            <h2>Criar postagem</h2>
+            <input type="text" id="post-title" placeholder="Titulo" required>
+            <input type="file" id="post-file" accept="image/*">
+            <button onclick="createPost()">Postar</button>
+        </div>
+        <!-- Conteúdo do fórum será gerado pelo JavaScript -->
+    </div>
+
+    <footer>
+        Fórum © 2024
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>
