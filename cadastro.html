@@ -1,100 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br"> <!-- Define o idioma do documento como português brasileiro -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a exibição em dispositivos móveis -->
+    <title>Cadastro</title> <!-- Define o título da página -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-
+            font-family: 'Arial', sans-serif; /* Define a fonte padrão como Arial */
+            background-color: #f4f4f4; /* Define a cor de fundo da página */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
+            display: flex; /* Usa o modelo flex para organizar os itens */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            align-items: center; /* Centraliza os itens verticalmente */
+            height: 100vh; /* Define a altura como 100% da altura da viewport */
         }
+        
         .back-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+            position: absolute; /* Posiciona o botão de forma absoluta */
+            top: 10px; /* Define a posição do botão a 10px do topo */
+            right: 10px; /* Define a posição do botão a 10px da direita */
+            background-color: #4caf50; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 5px 10px; /* Define o preenchimento do botão */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+            text-decoration: none; /* Remove a sublinha do link */
         }
 
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-            position: relative;
+            background-color: white; /* Define a cor de fundo do container */
+            padding: 20px; /* Define o preenchimento do container */
+            border-radius: 10px; /* Adiciona bordas arredondadas ao container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao container */
+            width: 300px; /* Define a largura do container */
+            text-align: center; /* Centraliza o texto no container */
+            position: relative; /* Define o posicionamento como relativo */
         }
 
         .back-button:hover {
-            background-color: rgba(0, 100, 0, 0.363);
-            color: #4caf50;
-            border: 2px solid #4caf50;
+            background-color: rgba(0, 100, 0, 0.363); /* Muda a cor de fundo ao passar o mouse */
+            color: #4caf50; /* Muda a cor do texto ao passar o mouse */
+            border: 2px solid #4caf50; /* Adiciona uma borda verde ao passar o mouse */
         }
 
         label {
-            display: block;
-            margin-bottom: 5px;
+            display: block; /* Exibe o elemento como um bloco */
+            margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
         }
 
         input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border-radius: 10px;
+            width: 100%; /* Define a largura do input como 100% do seu container */
+            padding: 8px; /* Define o preenchimento do input */
+            margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+            box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+            border-radius: 10px; /* Adiciona bordas arredondadas ao input */
         }
 
         button {
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
+            background-color: #4caf50; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 10px; /* Define o preenchimento do botão */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
         }
 
         button:hover {
-            background-color: rgba(0, 100, 0, 0.363);
-            color: #4caf50;
-            border: 2px solid #4caf50;
+            background-color: rgba(0, 100, 0, 0.363); /* Muda a cor de fundo ao passar o mouse */
+            color: #4caf50; /* Muda a cor do texto ao passar o mouse */
+            border: 2px solid #4caf50; /* Adiciona uma borda verde ao passar o mouse */
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <a href="home.html" class="back-button">Voltar</a>
-        <h1>Cadastro</h1>
-        <form id="cadastroForm">
-            <label for="username">Nome:</label>
-            <input type="text" id="username" name="username" required>
+        <a href="home.html" class="back-button">Voltar</a> <!-- Botão de voltar para a página inicial -->
+        <h1>Cadastro</h1> <!-- Título da página -->
+        <form id="cadastroForm"> <!-- Formulário de cadastro -->
+            <label for="username">Nome:</label> <!-- Rótulo para o campo de nome -->
+            <input type="text" id="username" name="username" required> <!-- Campo de entrada para o nome -->
 
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="password">Senha:</label> <!-- Rótulo para o campo de senha -->
+            <input type="password" id="password" name="password" required> <!-- Campo de entrada para a senha -->
 
-            <label for="confirmPassword">Confirmar senha:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <label for="confirmPassword">Confirmar senha:</label> <!-- Rótulo para o campo de confirmação de senha -->
+            <input type="password" id="confirmPassword" name="confirmPassword" required> <!-- Campo de entrada para a confirmação de senha -->
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Cadastrar</button> <!-- Botão para enviar o formulário -->
         </form>
     </div>
 
-    <script src="cadastro.js"></script>
+    <script src="cadastro.js"></script> <!-- Inclui o arquivo JavaScript -->
 </body>
-
 </html>
