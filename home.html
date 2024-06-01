@@ -1,104 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> <!-- Define o idioma do documento como inglês -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wake up</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a exibição em dispositivos móveis -->
+    <title>Wake up</title> <!-- Define o título da página -->
     <style>
         body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-image: url(https://i.pinimg.com/originals/58/92/67/5892673add898a0b063cd50042f6d95b.jpg);
-            margin: 0;
-            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte padrão */
+            background-image: url(https://i.pinimg.com/originals/58/92/67/5892673add898a0b063cd50042f6d95b.jpg); /* Define a imagem de fundo */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            display: flex; /* Usa o modelo flex para organizar os itens */
+            flex-direction: column; /* Organiza os itens em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente */
+            justify-content: center; /* Centraliza os itens verticalmente */
+            height: 100vh; /* Define a altura como 100% da altura da viewport */
         }
 
         .titulo {
-            color: white;
-            font-family: 'Franklin Gothic Medium';
-            font-size: large;
-            margin-bottom: 20px;
+            color: white; /* Define a cor do texto como branco */
+            font-family: 'Franklin Gothic Medium'; /* Define a fonte do título */
+            font-size: large; /* Define o tamanho da fonte */
+            margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
         }
 
         .ab-3 {
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
         }
 
         label {
-            color: white;
-            margin-bottom: 5px;
-            display: block;
+            color: white; /* Define a cor do texto como branco */
+            margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
+            display: block; /* Exibe o elemento como um bloco */
         }
 
         input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            border: none;
+            width: 100%; /* Define a largura do input como 100% do seu container */
+            padding: 8px; /* Define o preenchimento do input */
+            margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+            box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao input */
+            border: none; /* Remove a borda do input */
         }
 
         .btn_btn-success {
-            background-color: green;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
+            background-color: green; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 10px; /* Define o preenchimento do botão */
+            border-radius: 10px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+            text-decoration: none; /* Remove a sublinha do link */
         }
 
         .btn_btn-success:hover {
-            background-color: rgba(0, 100, 0, 0.363);
-            border-radius: 20px;
-        }
-        .cadastro-button {
-            border: none;
-            padding: 10px;
-            border-radius: 10px;
-            cursor: pointer;
+            background-color: rgba(0, 100, 0, 0.363); /* Muda a cor de fundo ao passar o mouse */
+            border-radius: 20px; /* Aumenta o raio das bordas ao passar o mouse */
         }
 
+        .cadastro-button {
+            border: none; /* Remove a borda do botão */
+            padding: 10px; /* Define o preenchimento do botão */
+            border-radius: 10px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+        }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="titulo">
-            <h1> Bem vindo ao meu site </h1>
+            <h1>Bem vindo ao meu site</h1> <!-- Título da página -->
         </div>
 
         <div class="ab-3">
-            <label for="usuario">Login</label>
-            <input type="text" id="usuario" class="form-control">
+            <label for="usuario">Login</label> <!-- Rótulo para o campo de login -->
+            <input type="text" id="usuario" class="form-control"> <!-- Campo de entrada para o login -->
         </div>
 
         <div class="ab-3">
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" class="form-control">
+            <label for="senha">Senha</label> <!-- Rótulo para o campo de senha -->
+            <input type="password" id="senha" class="form-control"> <!-- Campo de entrada para a senha -->
         </div>
 
         <div class="ab-3">
-            <button id="submit" class="btn_btn-success form-control">Logar</button>
+            <button id="submit" class="btn_btn-success form-control">Logar</button> <!-- Botão para enviar o formulário de login -->
         </div>
 
         <div class="cadastro-button">
-            <a href="cadastro.html" class="btn_btn-success form-control">Cadastro</a>
+            <a href="cadastro.html" class="btn_btn-success form-control">Cadastro</a> <!-- Botão para redirecionar para a página de cadastro -->
         </div>
-        </div>
-
     </div>
 
-    <script src="home.js"></script>
+    <script src="home.js"></script> <!-- Inclui o arquivo JavaScript -->
 </body>
-
 </html>
