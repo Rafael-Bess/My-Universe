@@ -1,149 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> <!-- Define o idioma do documento como inglês -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórum</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a exibição em dispositivos móveis -->
+    <title>Fórum</title> <!-- Define o título da página -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
+            background-color: #f4f4f4; /* Define a cor de fundo */
         }
 
         header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
+            background-color: #333; /* Define a cor de fundo do cabeçalho */
+            color: white; /* Define a cor do texto do cabeçalho */
+            text-align: center; /* Centraliza o texto no cabeçalho */
+            padding: 10px; /* Define o preenchimento do cabeçalho */
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+            display: flex; /* Usa o modelo flex para organizar os itens */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            margin-top: 20px; /* Adiciona uma margem superior */
         }
 
         nav a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
+            text-decoration: none; /* Remove a sublinha dos links */
+            color: #333; /* Define a cor do texto dos links */
+            margin: 0 15px; /* Adiciona margem horizontal entre os links */
+            font-size: 18px; /* Define o tamanho da fonte dos links */
+            font-weight: bold; /* Define a fonte dos links como negrito */
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px; /* Define a largura máxima do container */
+            margin: 20px auto; /* Adiciona margem superior e inferior e centraliza o container horizontalmente */
+            padding: 20px; /* Define o preenchimento do container */
+            background-color: white; /* Define a cor de fundo do container */
+            border-radius: 10px; /* Adiciona bordas arredondadas ao container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao container */
         }
 
         .topic {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
+            border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior aos tópicos */
+            padding: 10px 0; /* Define o preenchimento dos tópicos */
         }
 
         .topic h2 {
-            margin: 0;
-            font-size: 24px;
+            margin: 0; /* Remove a margem dos títulos dos tópicos */
+            font-size: 24px; /* Define o tamanho da fonte dos títulos dos tópicos */
         }
 
         .post {
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
+            border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior aos posts */
+            padding: 10px 0; /* Define o preenchimento dos posts */
         }
 
         .post h3 {
-            margin: 0;
-            font-size: 20px;
+            margin: 0; /* Remove a margem dos títulos dos posts */
+            font-size: 20px; /* Define o tamanho da fonte dos títulos dos posts */
         }
 
         .post p {
-            margin: 5px 0;
-            font-size: 16px;
+            margin: 5px 0; /* Define a margem dos parágrafos dos posts */
+            font-size: 16px; /* Define o tamanho da fonte dos parágrafos dos posts */
         }
 
         .comment {
-            margin-left: 20px;
-            border-left: 3px solid #ddd;
-            padding-left: 10px;
-            margin-top: 10px;
+            margin-left: 20px; /* Adiciona margem à esquerda dos comentários */
+            border-left: 3px solid #ddd; /* Adiciona uma borda esquerda aos comentários */
+            padding-left: 10px; /* Define o preenchimento à esquerda dos comentários */
+            margin-top: 10px; /* Adiciona margem superior aos comentários */
         }
 
         .comment p {
-            margin: 5px 0;
-            font-size: 14px;
+            margin: 5px 0; /* Define a margem dos parágrafos dos comentários */
+            font-size: 14px; /* Define o tamanho da fonte dos parágrafos dos comentários */
         }
 
         .upload-form, .comment-form {
-            margin-top: 20px;
+            margin-top: 20px; /* Adiciona margem superior aos formulários */
         }
 
         .upload-form input, .comment-form input, .comment-form textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: calc(100% - 20px); /* Define a largura dos inputs e textareas */
+            padding: 10px; /* Define o preenchimento dos inputs e textareas */
+            margin: 10px 0; /* Define a margem vertical dos inputs e textareas */
+            border: 1px solid #ccc; /* Adiciona uma borda aos inputs e textareas */
+            border-radius: 5px; /* Adiciona bordas arredondadas aos inputs e textareas */
         }
 
         .upload-form button, .comment-form button {
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
+            background-color: #4caf50; /* Define a cor de fundo dos botões */
+            color: white; /* Define a cor do texto dos botões */
+            border: none; /* Remove a borda dos botões */
+            padding: 10px; /* Define o preenchimento dos botões */
+            border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+            cursor: pointer; /* Muda o cursor para pointer ao passar sobre os botões */
         }
 
         .upload-form button:hover, .comment-form button:hover {
-            background-color: rgba(0, 100, 0, 0.363);
-            color: #4caf50;
-            border: 2px solid #4caf50;
+            background-color: rgba(0, 100, 0, 0.363); /* Muda a cor de fundo ao passar o mouse */
+            color: #4caf50; /* Muda a cor do texto ao passar o mouse */
+            border: 2px solid #4caf50; /* Adiciona uma borda ao passar o mouse */
         }
 
         footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 10px; /* Define o preenchimento do rodapé */
+            background-color: #333; /* Define a cor de fundo do rodapé */
+            color: white; /* Define a cor do texto do rodapé */
+            position: fixed; /* Fixa o rodapé na parte inferior da página */
+            width: 100%; /* Define a largura do rodapé como 100% */
+            bottom: 0; /* Posiciona o rodapé na parte inferior da página */
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Fórum</h1>
+        <h1>Fórum</h1> <!-- Título do fórum -->
     </header>
 
     <nav>
-        <a href="#categoria1">Menu</a>
+        <a href="#categoria1">Menu</a> <!-- Link para o menu -->
     </nav>
 
     <div class="container" id="forum-container">
         <!-- Formulário de criação de post -->
         <div class="upload-form">
-            <h2>Criar postagem</h2>
-            <input type="text" id="post-title" placeholder="Titulo" required>
-            <input type="file" id="post-file" accept="image/*">
-            <button onclick="createPost()">Postar</button>
+            <h2>Criar postagem</h2> <!-- Título do formulário de criação de postagem -->
+            <input type="text" id="post-title" placeholder="Titulo" required> <!-- Campo de entrada para o título da postagem -->
+            <input type="file" id="post-file" accept="image/*"> <!-- Campo de entrada para selecionar uma imagem -->
+            <button onclick="createPost()">Postar</button> <!-- Botão para criar a postagem -->
         </div>
         <!-- Conteúdo do fórum será gerado pelo JavaScript -->
     </div>
 
     <footer>
-        Fórum © 2024
+        Fórum © 2024 <!-- Texto do rodapé -->
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="menu.js"></script> <!-- Inclui o arquivo JavaScript -->
 </body>
-
 </html>
